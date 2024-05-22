@@ -55,9 +55,9 @@ const server = createServer(async (req, res) => {
             if (check_cache(url, stats, req, res)) return
             console.log(`request for ${url}`)
             mime(url, res);
-            createReadStream(url).pipe(createGzip()).pipe(res);
+            createReadStream(url).pipe(createGzip()).pipe(res)
         } else err(url, res)
     } catch (_) { err(url, res) }
 })
 
-server.listen(PORT, () => console.log(`server listening on port ${PORT}`));
+server.listen(PORT, () => console.log(`server listening on port ${PORT}`))
