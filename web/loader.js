@@ -1,1 +1,2 @@
-const loadModule = (uri) => WebAssembly.instantiateStreaming(fetch(uri).then(response.blob()))
+const loadModule = (uri, imports={}) => WebAssembly.instantiateStreaming(fetch(uri), { imports })
+loadModule("hapt.wasm", { f: () => {} })
