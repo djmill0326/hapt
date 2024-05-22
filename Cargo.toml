@@ -1,0 +1,16 @@
+cargo-features = ["edition2024"]
+
+[package]
+name = "hapt"
+version = "0.1.0"
+authors = ["Dylan Miller ehpt@hapt.me"]
+description = "js-wasm intercommunication layer"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/yourgithubusername/hello-wasm"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
